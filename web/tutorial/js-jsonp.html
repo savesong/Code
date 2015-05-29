@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>JSONP</title>
+    <style>
+      h1 {
+        border-bottom: 1px solid #aaa;
+      }
+
+      .code {
+        color: black;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        padding: 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>JSONP</h1>
+      <p>From Wikipedia, the free encyclopedia</p>
+    </header>
+    <article>
+      <p><b>JSONP</b> or "JSON with padding" is a communication technique used in JavaScript programs running in web browsers to request data from a server in a different domain, something prohibited by typical web browsers because of the same-origin policy. JSONP takes advantage of the fact that browsers do not enforce the same-origin policy on <code>&lt;script&gt;</code> tags. Since it works through <code>&lt;script&gt;</code> tags, JSONP supports only the GET request method.</p>
+      <p>Note that for JSONP to work, a server must know how to reply with JSONP-formatted results. JSONP does not work with JSON-formatted results. The JSONP parameters passed as arguments to a script are defined by the server. A typical JSONP request is similar to the following sample code:</p>
+      <section class="code">&lt;!-- Request sent via a script tag --&gt;<br>&lt;script src="https://status.github.com/api/status.json?callback=apiStatus"&gt;&lt;/script&gt;<br>&lt;!-- Data received as an execution of the predefined function. --&gt;<br>&lt;script&gt; function apiStatus(data) { console.log(data.status); } &lt;/script&gt;</section>
+    </article>
+
+    <script src="js/jsonp.js"></script>
+    <script src="https://status.github.com/api/status.json?callback=apiStatus"></script>
+  </body>
+</html>
