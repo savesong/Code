@@ -47,3 +47,105 @@ var c7 = document.getElementById("canvas7");
 var ctx7 = c7.getContext("2d");
 ctx7.font = "30px Arial";
 ctx7.strokeText("Hello World", 10, 50);
+
+// set font to 30px "Comic Sans MS" and write a filled red text in the center of the canvas
+var c8 = document.getElementById("canvas8");
+var ctx8 = c8.getContext("2d");
+ctx8.font = "30px Comic Sans MS";
+ctx8.fillStyle = "red";
+ctx8.textAlign = "center";
+ctx8.fillText("Hello World", c7.width/2, c7.height/2);
+
+// draw an image on the canvas
+function drawImageOnCanvas() {
+  var c9 = document.getElementById("canvas9");
+  var ctx9 = c9.getContext("2d");
+  var img = document.getElementById("scream");
+  ctx9.drawImage(img, 10, 10);
+}
+window.onload = function() {
+  drawImageOnCanvas();
+}
+
+// build an analog clock using HTML canvas
+var c10 = document.getElementById("canvas10");
+var ctx10 = c10.getContext("2d");
+var radius = c10.height / 2;
+ctx10.translate(radius, radius);
+radius *= 0.9;
+setInterval(drawClock, 1000);
+
+function drawClock() {
+  drawFace(ctx10, radius);
+  drawNumbers(ctx10, radius);
+  drawTime(ctx10, radius);
+}
+
+function drawFace(ctx, radius) {
+  ctx.beginPath();
+  ctx.arc(0, 0, radius, 0, 2 * Math.PI);
+  ctx.fillStyle = "white";
+  ctx.fill();
+
+  var grad = ctx.createRadialGradient(0, 0, radius*0.95, 0, 0, radius*1.05);
+  grad.addColorStop(0, "#333");
+  grad.addColorStop(0.5, "white");
+  grad.addColorStop(1, "#333");
+  ctx.strokeStyle = grad;
+  ctx.lineWidth = radius * 0.1;
+  ctx.stroke();
+
+  ctx.beginPath();
+  ctx.arc(0, 0, radius * 0.1, 0, 2 * Math.PI);
+  ctx.fillStyle = "#333";
+  ctx.fill();
+}
+
+function drawNumbers(ctx, radius) {
+  ctx.font = radius * 0.15 + "px arial";
+  ctx.textBaseline = "middle";
+  ctx.textAlign = "center";
+  var ang;
+  for (var num = 1; num < 13; num++) {
+    ang = num * Math.PI / 6;
+    ctx.rotate(ang);
+    ctx.translate(0, -radius * 0.85);
+    ctx.rotate(-ang);
+    ctx.fillText(num.toString(), 0, 0);
+    ctx.rotate(ang);
+    ctx.translate(0, radius * 0.85);
+    ctx.rotate(-ang);
+  }
+  ctx.stroke();
+}
+
+function drawTime(ctx, radius) {
+  var now = new Date();
+  var hour = now.getHours();
+  var minute = now.getMinutes();
+  var second = now.getSeconds();
+  // hour
+  hour = hour % 12;
+  hour = (hour * Math.PI / 6) 
+    + (minute * Math.PI / (6 * 60))
+    + (second * Math.PI / (360 * 60));
+  drawHand(ctx, hour, radius * 0.5, radius * 0.07);
+  // minute
+  minute = (minute * Math.PI / 30)
+    + (second * Math.PI / (30 * 60));
+  drawHand(ctx, minute, radius * 0.8, radius * 0.07);
+  // second
+  second = second * Math.PI / 30;
+  drawHand(ctx, second, radius * 0.9, radius * 0.02);
+}
+
+function drawHand(ctx, pos, length, width) {
+  ctx.beginPath();
+  ctx.lineWidth = width;
+  ctx.lineCap = "round";
+  ctx.moveTo(0, 0);
+  ctx.rotate(pos);
+  ctx.lineTo(0, -length);
+  ctx.stroke();
+  ctx.rotate(-pos);
+}
