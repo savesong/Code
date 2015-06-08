@@ -1,42 +1,30 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<title>致飞飞</title>
-<style type="text/CSS">
-#p1 { font-family:"黑体"; font-size: 25px; font-style: normal; }
-#p2 { font-family:"宋体"; font-size: 25px; font-style: normal; }
-.lcp-footer {
-    border-top: solid 1px #ddd;
-    text-align: center;
-    padding: 10px 0;
-    margin: 35px 15px 0;
-    clear: both
-}
-</style>
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <title>送我呀</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/canvas.css">
+  </head>
 
-<body>
-<div id="p1">
-<p>
-送玫瑰太土，给钞票太俗，看电影不酷，去吃饭发福，逛大街辛苦;<br>
-此情无可托付，就做个网站为你祝福<br>
----祝亲爱的飞飞情人节快乐!
-</p></div>
+  <body>
+    <h1>待更新……</h1>
+    <section>
+      <canvas id="clock" width="400" height="400" style="background-color: #333">
+        Your browser does not support the canvas element.
+      </canvas>
+    </section>
 
-<div id="p2">
-<p>
-2012 - 我们结婚了！<br>
-2013 - 住进属于我们自己的新房！！<br>
-2014 - 天使宝宝笑笑诞生，我们升级为父母！！！<br>
-2015 - 期待我们新的人生旅程……<br>
-</p></div>
-
-<div class="lcp-footer">
-<p class="text-muted"><a href="http://www.miitbeian.gov.cn/">沪ICP备15007067号</a></p>
-</div>
-<script src="js/test.js"></script>
-</body>
-
+    <footer class="lcp-footer">
+      <p class="text-muted"><a href="http://www.miitbeian.gov.cn/">沪ICP备15007067号</a></p>
+    </footer>
+  
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.4.min.js"></script>
+    <script>
+        // Fallback to loading jQuery from a local path if the CDN is unavailable
+        (window.jQuery || document.write('<script src="/js/jquery-2.1.4.min.js"><\/script>'));
+    </script>
+    <script src="js/canvas.js"></script>
+  </body>
 </html>
 
