@@ -1,0 +1,55 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m" xmlns:form="sap.ui.layout.form" xmlns:commons="sap.ui.commons"
+    controllerName="com.www.view.ProjectDetail" xmlns:html="http://www.w3.org/1999/xhtml">
+    <Page title="{i18n>projectDetailPageTitle}" showNavButton="true"
+        navButtonPress="onNavButtonPress">
+
+        <content>
+            <form:SimpleForm minWidth="1024">
+                <Label labelFor="id" text="{i18n>projectAttributeIdTitle}" />
+                <commons:TextField id="id" value="{/id}"
+                    editable="false" />
+                <Label labelFor="projectAttr1" text="{i18n>projectAttribute1Title}" />
+                <commons:TextField id="projectAttr1"
+                    value="{/attr1}" editable="{config>/editable}" />
+                <Label labelFor="projectAttr2" text="{i18n>projectAttribute2Title}" />
+                <commons:TextField id="projectAttr2"
+                    value="{/attr2}" editable="{config>/editable}" />
+                <Label labelFor="projectAttr3" text="{i18n>projectAttribute3Title}" />
+                <commons:TextField id="projectAttr3"
+                    value="{/attr3}" editable="{config>/editable}" />
+                <Label labelFor="projectAttr4" text="{i18n>projectAttribute4Title}" />
+                <commons:TextField id="projectAttr4"
+                    value="{/attr4}" editable="{config>/editable}" />
+                <Label labelFor="projectAttr5" text="{i18n>projectAttribute5Title}" />
+                <commons:TextField id="projectAttr5"
+                    value="{/attr5}" editable="{config>/editable}" />
+                <Label labelFor="projectAttr6" text="{i18n>projectAttribute6Title}" />
+                <commons:TextField id="projectAttr6"
+                    value="{/attr6}" editable="{config>/editable}" />
+                <Label labelFor="projectAttr7" text="{i18n>projectAttribute7Title}" />
+                <commons:TextField id="projectAttr7"
+                    value="{/attr7}" editable="{config>/editable}" />
+                <Label labelFor="projectAttr8" text="{i18n>projectAttribute8Title}" />
+                <commons:TextField id="projectAttr8"
+                    value="{/attr8}" editable="{config>/editable}" />
+                <Label labelFor="projectAttr9" text="{i18n>projectAttribute9Title}" />
+                <commons:TextField id="projectAttr9"
+                    value="{/attr9}" editable="{config>/editable}" />
+            </form:SimpleForm>
+        </content>
+
+        <footer>
+            <Bar>
+                <contentRight>
+                    <Button text="{i18n>editProjectButtonText}"
+                        icon="sap-icon://edit" press="onEditProject" />
+                    <Button text="{i18n>saveProjectButtonText}"
+                        icon="sap-icon://save" press="onSaveEditedProject"
+                        enabled="{config>/bEnableSave}" />
+                </contentRight>
+            </Bar>
+        </footer>
+
+    </Page>
+</core:View>

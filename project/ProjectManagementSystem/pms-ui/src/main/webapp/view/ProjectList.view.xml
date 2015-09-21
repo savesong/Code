@@ -1,0 +1,95 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m" xmlns:table="sap.ui.table" xmlns:commons="sap.ui.commons"
+    controllerName="com.www.view.ProjectList" xmlns:html="http://www.w3.org/1999/xhtml">
+    <Page title="{i18n>projectListPageTitle}">
+
+        <subHeader>
+            <Toolbar>
+                <content>
+                    <SearchField search="onSearch" width="100%">
+                    </SearchField>
+                </content>
+            </Toolbar>
+        </subHeader>
+
+        <content>
+            <table:Table id="projectListTable" width="100%"
+                visibleRowCount="10" editable="false" rows="{/projectList}"
+                cellClick="onCellClick" selectionMode="sap.ui.table.SelectionMode.Single"
+                navigationMode="sap.ui.table.NavigationMode.Paginator">
+                <table:Column>
+                    <Label text="{i18n>projectAttributeIdTitle}" />
+                    <table:template>
+                        <commons:TextField value="{id}"></commons:TextField>
+                    </table:template>
+                </table:Column>
+                <table:Column>
+                    <Label text="{i18n>projectAttribute1Title}" />
+                    <table:template>
+                        <commons:TextField value="{attr1}"></commons:TextField>
+                    </table:template>
+                </table:Column>
+                <table:Column>
+                    <Label text="{i18n>projectAttribute2Title}" />
+                    <table:template>
+                        <commons:TextField value="{attr2}"></commons:TextField>
+                    </table:template>
+                </table:Column>
+                <table:Column>
+                    <Label text="{i18n>projectAttribute3Title}" />
+                    <table:template>
+                        <commons:TextField value="{attr3}"></commons:TextField>
+                    </table:template>
+                </table:Column>
+                <table:Column>
+                    <Label text="{i18n>projectAttribute4Title}" />
+                    <table:template>
+                        <commons:TextField value="{attr4}"></commons:TextField>
+                    </table:template>
+                </table:Column>
+                <table:Column>
+                    <Label text="{i18n>projectAttribute5Title}" />
+                    <table:template>
+                        <commons:TextField value="{attr5}"></commons:TextField>
+                    </table:template>
+                </table:Column>
+                <table:Column>
+                    <Label text="{i18n>projectStatusTitle}" />
+                    <table:template>
+                        <commons:TextField
+                            value="{ path: 'status', 
+                                formatter: 'com.www.util.Formatter.statusFormatter' }">
+                        </commons:TextField>
+                    </table:template>
+                </table:Column>
+                <table:Column>
+                    <Label text="{i18n>projectProgressTitle}" />
+                    <table:template>
+                        <ProgressIndicator xmlns="sap.ui.commons"
+                            id="id" busy="false" busyIndicatorDelay="1000"
+                            visible="true" fieldGroupIds="" enabled="true"
+                            barColor="{ path: 'status', 
+                                formatter: 'com.www.util.Formatter.barColorFormatter' }"
+                            displayValue="{ path: 'progressPercentage', 
+                                formatter: 'com.www.util.Formatter.progressFormatter' }%"
+                            percentValue="{ path: 'progressPercentage', 
+                                formatter: 'com.www.util.Formatter.progressFormatter' }"
+                            showValue="true" width="100%"
+                            validateFieldGroup="">
+                        </ProgressIndicator>
+                    </table:template>
+                </table:Column>
+            </table:Table>
+        </content>
+
+        <footer>
+            <Bar>
+                <contentRight>
+                    <Button text="{i18n>addProjectButtonText}"
+                        icon="sap-icon://add" press="onAddProject" />
+                </contentRight>
+            </Bar>
+        </footer>
+
+    </Page>
+</core:View>

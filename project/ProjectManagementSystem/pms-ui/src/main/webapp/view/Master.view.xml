@@ -1,0 +1,19 @@
+<mvc:View controllerName="com.www.view.Master"
+    displayBlock="true" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+    <Page id="page" title="{i18n>projectManagementSystem}">
+        <headerContent>
+            <Button press="onPressLogBtn" />
+        </headerContent>
+        <content>
+            <List id="list" items="{/MenuItems}" mode="{device>/listMode}"
+                noDataText="{i18n>masterViewNoDataText}" select="onSelect"
+                growing="true" growingScrollToLoad="true">
+                <items>
+                    <ObjectListItem type="{device>/listItemType}"
+                        press="onSelect" title="{Name}">
+                    </ObjectListItem>
+                </items>
+            </List>
+        </content>
+    </Page>
+</mvc:View>
