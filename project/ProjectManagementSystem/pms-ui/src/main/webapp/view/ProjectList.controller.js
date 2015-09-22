@@ -15,7 +15,7 @@ com.www.util.Controller.extend("com.www.view.ProjectList", {
     oModel.setDefaultBindingMode(sap.ui.model.BindingMode.OneWay);
     this.getView().setModel(oModel);
 
-    // var sUrl = "/bss-ui/data.json";
+    // var sUrl = "/pms-ui/data.json";
     // jQuery.ajax(sUrl).done(function(data, textStatus, jqXHR) {
     // console.error(data);
     // });

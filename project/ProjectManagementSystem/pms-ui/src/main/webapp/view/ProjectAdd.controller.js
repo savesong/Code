@@ -1,14 +1,14 @@
 jQuery.sap.require("com.www.util.Controller");
 
-com.www.util.Controller.extend("com.www.view.RequestAdd", {
+com.www.util.Controller.extend("com.www.view.ProjectAdd", {
 
-  onSaveRequest : function(oControlEvent) {
+  onSaveProject : function(oControlEvent) {
     // @@ save data
-    this.getRouter()._navBack("RequestList");
+    this.getRouter()._navBack("ProjectList");
   },
 
-  onCancelAddRequest : function(oControlEvent) {
-    this.getRouter()._navBack("RequestList", this.getView());
+  onCancelAddProject : function(oControlEvent) {
+    this.getRouter()._navBack("ProjectList", this.getView());
   }
 
 });

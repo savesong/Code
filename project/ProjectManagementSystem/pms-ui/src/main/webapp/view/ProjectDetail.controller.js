@@ -1,12 +1,12 @@
 jQuery.sap.require("com.www.util.Controller");
 
-com.www.util.Controller.extend("com.www.view.RequestDetail", {
+com.www.util.Controller.extend("com.www.view.ProjectDetail", {
 
   /**
    * Called when a controller is instantiated and its View controls (if available) are already created. Can be used to
    * modify the View before it is displayed, to bind event handlers and do other one-time initialization.
    * 
-   * @memberOf view.RequestList
+   * @memberOf view.ProjectList
    */
   onInit : function() {
     var configModel = new sap.ui.model.json.JSONModel({
@@ -35,17 +35,17 @@ com.www.util.Controller.extend("com.www.view.RequestDetail", {
 
   onNavButtonPress : function(oControlEvent) {
     this._toFormViewMode();
-    this.getRouter()._navBack("RequestList");
+    this.getRouter()._navBack("ProjectList");
   },
 
-  onEditRequest : function() {
+  onEditProject : function() {
     this._toFormEditMode();
   },
 
-  onSaveEditedRequest : function() {
+  onSaveEditedProject : function() {
     this._toFormViewMode();
     // save data
-    this.getRouter()._navBack("RequestList");
+    this.getRouter()._navBack("ProjectList");
   },
 
   _toFormEditMode : function(oControlEvent) {

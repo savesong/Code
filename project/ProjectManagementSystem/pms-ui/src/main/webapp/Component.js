@@ -4,7 +4,7 @@ jQuery.sap.require("com.www.util.Formatter");
 sap.ui.core.UIComponent.extend("com.www.Component", {
 
   metadata : {
-    name : "SAP Anywhere Business Support System",
+    name : "Project Management System",
     version : "1.0",
     includes : [],
     dependencies : {
@@ -94,7 +94,7 @@ sap.ui.core.UIComponent.extend("com.www.Component", {
     // Create and set domain model to the component
     var oModel = new sap.ui.model.json.JSONModel({
       MenuItems : [ {
-        Name : i18nModel.getProperty("requestManagement")
+        Name : i18nModel.getProperty("projectManagement")
       }, {
         Name : i18nModel.getProperty("testManagement")
       } ]
