@@ -43,8 +43,8 @@ com.www.util.Controller.extend("com.www.view.Master", function() {
 
     onRouteMatched : function(oEvent) {
       var i18nModel = this.getView().getModel("i18n");
-      menuViewMap[i18nModel.getProperty("requestManagement")] = {
-        routeName : "request"
+      menuViewMap[i18nModel.getProperty("projectManagement")] = {
+        routeName : "project"
       };
       menuViewMap[i18nModel.getProperty("testManagement")] = {
         routeName : "test"

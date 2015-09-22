@@ -31,17 +31,17 @@ sap.ui.core.UIComponent.extend("com.www.Component", {
         targetAggregation : "masterPages",
         targetControl : "idAppControl",
         subroutes : [ {
-          pattern : "Request",
-          name : "request",
-          view : "RequestList"
+          pattern : "Project",
+          name : "project",
+          view : "ProjectList"
         }, {
-          pattern : "RequestDetail",
-          name : "RequestDetail",
-          view : "RequestDetail"
+          pattern : "ProjectDetail",
+          name : "ProjectDetail",
+          view : "ProjectDetail"
         }, {
-          pattern : "RequestAdd",
-          name : "RequestAdd",
-          view : "RequestAdd"
+          pattern : "ProjectAdd",
+          name : "ProjectAdd",
+          view : "ProjectAdd"
         }, {
           pattern : "Test",
           name : "test",

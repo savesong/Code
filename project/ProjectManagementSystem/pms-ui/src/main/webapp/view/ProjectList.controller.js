@@ -1,13 +1,13 @@
 jQuery.sap.require("com.www.util.Controller");
 jQuery.sap.require("com.www.util.Request");
 
-com.www.util.Controller.extend("com.www.view.RequestList", {
+com.www.util.Controller.extend("com.www.view.ProjectList", {
 
   /**
    * Called when a controller is instantiated and its View controls (if available) are already created. Can be used to
    * modify the View before it is displayed, to bind event handlers and do other one-time initialization.
    * 
-   * @memberOf view.RequestList
+   * @memberOf view.ProjectList
    */
   onInit : function() {
     var oModel = new sap.ui.model.json.JSONModel("./data.json");
@@ -21,7 +21,7 @@ com.www.util.Controller.extend("com.www.view.RequestList", {
     // });
 
     // var that = this;
-    // com.www.util.Request.loadData({
+    // com.www.util.Project.loadData({
     // path : "/ExternalConnect/test",
     // view : this.getView(),
     // success : function(data, textStatus, jqXHR) {
@@ -36,22 +36,22 @@ com.www.util.Controller.extend("com.www.view.RequestList", {
     if (oContext) {
       var requestId = oContext.getProperty("id")
       if (requestId) {
-        this.getRouter().navTo("RequestDetail", {
+        this.getRouter().navTo("ProjectDetail", {
           requestId : requestId
         });
       }
     }
   },
 
-  onAddRequest : function(oControlEvent) {
-    this.getRouter().navTo("RequestAdd");
+  onAddProject : function(oControlEvent) {
+    this.getRouter().navTo("ProjectAdd");
   },
 
   onSearch : function(oControlEvent) {
     var sQuery = oControlEvent.getParameter("query");
     if (sQuery && sQuery.length > 0) {
       var aFilters = [ this._createFilter(sQuery) ];
-      this.getView().byId("requestListTable").getBinding("rows").filter(new sap.ui.model.Filter({
+      this.getView().byId("projectListTable").getBinding("rows").filter(new sap.ui.model.Filter({
         filters : aFilters,
         and : true
       }));
