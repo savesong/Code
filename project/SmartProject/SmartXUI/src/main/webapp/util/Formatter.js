@@ -1,6 +1,6 @@
-jQuery.sap.declare("com.www.util.Formatter");
+jQuery.sap.declare("com.www.smartx.util.Formatter");
 
-com.www.util.Formatter = {
+com.www.smartx.util.Formatter = {
 
   statusFormatter : function(status) {
     var i18nModel = sap.ui.getCore().getModel("i18n");

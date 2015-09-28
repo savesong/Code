@@ -1,6 +1,6 @@
-jQuery.sap.require("com.www.util.Controller");
+jQuery.sap.require("com.www.smartx.util.Controller");
 
-com.www.util.Controller.extend("com.www.view.ProjectAdd", {
+com.www.smartx.util.Controller.extend("com.www.smartx.view.RequestAdd", {
 
   onSaveProject : function(oControlEvent) {
     // @@ save data

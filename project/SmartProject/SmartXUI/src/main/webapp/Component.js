@@ -1,7 +1,7 @@
-jQuery.sap.require("com.www.MyRouter");
-jQuery.sap.require("com.www.util.Formatter");
+jQuery.sap.require("com.www.smartx.MyRouter");
+jQuery.sap.require("com.www.smartx.util.Formatter");
 
-sap.ui.core.UIComponent.extend("com.www.Component", {
+sap.ui.core.UIComponent.extend("com.www.smartx.Component", {
 
   metadata : {
     name : "Project Management System",
@@ -11,16 +11,16 @@ sap.ui.core.UIComponent.extend("com.www.Component", {
       libs : [ "sap.m", "sap.ui.layout" ],
       components : []
     },
-    rootView : "com.www.view.App",
+    rootView : "com.www.smartx.view.App",
     config : {
       resourceBundle : "i18n/i18n.properties",
       serviceConfig : {}
     },
     routing : {
       config : {
-        routerClass : com.www.MyRouter,
+        routerClass : com.www.smartx.MyRouter,
         viewType : "XML",
-        viewPath : "com.www.view",
+        viewPath : "com.www.smartx.view",
         targetAggregation : "detailPages",
         clearTarget : false
       },
@@ -70,7 +70,7 @@ sap.ui.core.UIComponent.extend("com.www.Component", {
 
     // always use absolute paths relative to our own component
     // (relative paths will fail if running in the Fiori Launchpad)
-    var rootPath = jQuery.sap.getModulePath("com.www");
+    var rootPath = jQuery.sap.getModulePath("com.www.smartx");
 
     // set i18n model
     var i18nModel = new sap.ui.model.resource.ResourceModel({
@@ -79,7 +79,7 @@ sap.ui.core.UIComponent.extend("com.www.Component", {
     this.setModel(i18nModel, "i18n");
     sap.ui.getCore().setModel(i18nModel, "i18n");
 
-    // com.www.service.i18n.setLocalizationHelper(i18nModel);
+    // com.www.smartx.service.i18n.setLocalizationHelper(i18nModel);
     // var sServiceUrl = mConfig.serviceConfig.serviceUrl;
 
     // //This code is only needed for testing the application when there is

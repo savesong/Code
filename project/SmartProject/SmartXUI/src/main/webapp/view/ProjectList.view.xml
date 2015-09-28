@@ -1,6 +1,6 @@
 <core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m" xmlns:table="sap.ui.table" xmlns:commons="sap.ui.commons"
-    controllerName="com.www.view.ProjectList" xmlns:html="http://www.w3.org/1999/xhtml">
+    controllerName="com.www.smartx.view.ProjectList" xmlns:html="http://www.w3.org/1999/xhtml">
     <Page title="{i18n>projectListPageTitle}">
 
         <subHeader>
@@ -58,7 +58,7 @@
                     <table:template>
                         <commons:TextField
                             value="{ path: 'status', 
-                                formatter: 'com.www.util.Formatter.statusFormatter' }">
+                                formatter: 'com.www.smartx.util.Formatter.statusFormatter' }">
                         </commons:TextField>
                     </table:template>
                 </table:Column>
@@ -69,11 +69,11 @@
                             id="id" busy="false" busyIndicatorDelay="1000"
                             visible="true" fieldGroupIds="" enabled="true"
                             barColor="{ path: 'status', 
-                                formatter: 'com.www.util.Formatter.barColorFormatter' }"
+                                formatter: 'com.www.smartx.util.Formatter.barColorFormatter' }"
                             displayValue="{ path: 'progressPercentage', 
-                                formatter: 'com.www.util.Formatter.progressFormatter' }%"
+                                formatter: 'com.www.smartx.util.Formatter.progressFormatter' }%"
                             percentValue="{ path: 'progressPercentage', 
-                                formatter: 'com.www.util.Formatter.progressFormatter' }"
+                                formatter: 'com.www.smartx.util.Formatter.progressFormatter' }"
                             showValue="true" width="100%"
                             validateFieldGroup="">
                         </ProgressIndicator>

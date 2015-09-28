@@ -1,7 +1,7 @@
 jQuery.sap.require("sap.m.MessageBox");
-jQuery.sap.require("com.www.util.Controller");
+jQuery.sap.require("com.www.smartx.util.Controller");
 
-com.www.util.Controller.extend("com.www.view.Master", function() {
+com.www.smartx.util.Controller.extend("com.www.smartx.view.Master", function() {
   "use strict";
 
   var menuViewMap = {};
@@ -52,7 +52,7 @@ com.www.util.Controller.extend("com.www.view.Master", function() {
       // Load the detail view in desktop
       this.getRouter().myNavToWithoutHash({
         currentView : this.getView(),
-        targetViewName : "com.www.view.Detail",
+        targetViewName : "com.www.smartx.view.Detail",
         targetViewType : "XML"
       });
 

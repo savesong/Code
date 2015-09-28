@@ -1,6 +1,6 @@
 <core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m" xmlns:form="sap.ui.layout.form" xmlns:commons="sap.ui.commons"
-    controllerName="com.www.view.ProjectDetail" xmlns:html="http://www.w3.org/1999/xhtml">
+    controllerName="com.www.smartx.view.ProjectDetail" xmlns:html="http://www.w3.org/1999/xhtml">
     <Page title="{i18n>projectDetailPageTitle}" showNavButton="true"
         navButtonPress="onNavButtonPress">
 

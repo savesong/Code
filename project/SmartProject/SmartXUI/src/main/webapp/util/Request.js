@@ -1,12 +1,12 @@
-jQuery.sap.require("com.www.util.Config");
+jQuery.sap.require("com.www.smartx.util.Config");
 
-jQuery.sap.declare("com.www.util.Request");
+jQuery.sap.declare("com.www.smartx.util.Request");
 
-com.www.util.Request = {
+com.www.smartx.util.Request = {
 
   ajaxRequest : function(oSettings) {
     if (oSettings) {
-      var sUrl = com.www.util.Config.getServiceBaseUrl() + oSettings.path;
+      var sUrl = com.www.smartx.util.Config.getServiceBaseUrl() + oSettings.path;
       var jqXHR = jQuery.ajax(sUrl, {
         async : oSettings.async ? oSettings.async : true,
         cache : oSettings.cache ? oSettings.cache : false,
@@ -34,7 +34,7 @@ com.www.util.Request = {
           // && rsJSON.error.code == csm.js.util.constants.ERROR_CODE.AUTHORIZATION_FAIL
           ) {
             // csm.js.util.util.removeOperatorStorage();
-            location.replace(com.www.util.Config.getApplicationBaseUrl());
+            location.replace(com.www.smartx.util.Config.getApplicationBaseUrl());
           } else {
             // app.getNotificationView().addErrorMsg(jqXHR, this.url);
 

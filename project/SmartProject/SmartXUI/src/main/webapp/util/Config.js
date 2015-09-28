@@ -1,6 +1,6 @@
-jQuery.sap.declare("com.www.util.Config");
+jQuery.sap.declare("com.www.smartx.util.Config");
 
-com.www.util.Config = {
+com.www.smartx.util.Config = {
 
   getApplicationBaseUrl : function() {
     return "/pms-ui";

@@ -1,7 +1,7 @@
-jQuery.sap.require("com.www.util.Controller");
-jQuery.sap.require("com.www.util.Request");
+jQuery.sap.require("com.www.smartx.util.Controller");
+jQuery.sap.require("com.www.smartx.util.Request");
 
-com.www.util.Controller.extend("com.www.view.ProjectList", {
+com.www.smartx.util.Controller.extend("com.www.smartx.view.ProjectList", {
 
   /**
    * Called when a controller is instantiated and its View controls (if available) are already created. Can be used to
@@ -21,7 +21,7 @@ com.www.util.Controller.extend("com.www.view.ProjectList", {
     // });
 
     // var that = this;
-    // com.www.util.Project.loadData({
+    // com.www.smartx.util.Project.loadData({
     // path : "/ExternalConnect/test",
     // view : this.getView(),
     // success : function(data, textStatus, jqXHR) {

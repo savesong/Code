@@ -1,6 +1,6 @@
-jQuery.sap.require("com.www.util.Controller");
+jQuery.sap.require("com.www.smartx.util.Controller");
 
-com.www.util.Controller.extend("com.www.view.ProjectDetail", {
+com.www.smartx.util.Controller.extend("com.www.smartx.view.RequestDetail", {
 
   /**
    * Called when a controller is instantiated and its View controls (if available) are already created. Can be used to

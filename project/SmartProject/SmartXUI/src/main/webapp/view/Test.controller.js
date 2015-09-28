@@ -1,8 +1,8 @@
 jQuery.sap.require("sap.m.MessageBox");
 jQuery.sap.require("sap.m.MessageToast");
-jQuery.sap.require("com.www.util.Controller");
+jQuery.sap.require("com.www.smartx.util.Controller");
 
-com.www.util.Controller.extend("com.www.view.Test", function() {
+com.www.smartx.util.Controller.extend("com.www.smartx.view.Test", function() {
   "use strict";
   var i18nModel;
   return {

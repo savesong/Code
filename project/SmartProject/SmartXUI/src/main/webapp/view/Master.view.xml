@@ -1,4 +1,4 @@
-<mvc:View controllerName="com.www.view.Master"
+<mvc:View controllerName="com.www.smartx.view.Master"
     displayBlock="true" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
     <Page id="page" title="{i18n>projectManagementSystem}">
         <headerContent>

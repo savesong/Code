@@ -6,7 +6,7 @@
   xmlns:f="sap.ui.layout.form"
   xmlns:l="sap.ui.layout"
   height="100%"
-  controllerName="com.www.view.Test">
+  controllerName="com.www.smartx.view.Test">
 
   <Page
     title="{i18n>testDetailPageTitle}"
