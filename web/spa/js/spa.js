@@ -47,7 +47,7 @@ var spa = (function($) {
 	return {
 		initModule: initModule
 	};
-})(jQuery);
+})(window.jQuery);
 
 jQuery(function() {
 	spa.initModule(jQuery('#spa'));
