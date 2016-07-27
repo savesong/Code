@@ -1,0 +1,44 @@
+// Variables
+$link-color: red;
+$font-size: 15px;
+
+a {
+	color: $link-color;
+	font-size: $font-size;
+}
+
+// Nesting
+ul {
+	margin: 0;
+	li {
+		padding-left: 10px;
+		&.top {
+			padding-left: 0px;
+		}
+	}
+}
+
+// Mixins
+@mixin roundedBox($radius: 5px) {
+	border-radius: $radius;
+	-moz-border-radius: $radius;
+	-webkit-border-radius: $radius;
+}
+div {
+	@include roundedBox;
+}
+#box {
+	@include roundedBox(10px);
+}
+
+// Inheritance
+.red-color {
+	color: red;
+}
+a {
+	font-weight: bold;
+	@extend .red-color;
+}
+.error {
+	@extend .red-color;
+}
