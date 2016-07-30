@@ -14,9 +14,9 @@ nav {
         margin: 0;
         padding: 0;
         list-style: none;
-    }
-    li {
-        display: inline-block;
+        li {
+            display: inline-block;
+        }
     }
     a {
         display: block;
@@ -73,3 +73,4 @@ aside[role="complementary"] {
     float: right;
     width: 300px / 960px * 100%;
 }
+
